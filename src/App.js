@@ -1,24 +1,35 @@
-import logo from './logo.svg';
+import React, { useState } from 'react';
 import './App.css';
+import TopToolBar from './componets/TopToolBar';
+import SongList from './componets/SongList';
+
+
+
 
 function App() {
+  const [songs, setSongs] = useState([]);
+  const [selectedFile, setSelectedFile] = useState(null);
+
+  const handleSongUpload = (songData) => {
+    // Update state with the uploaded song
+    setSongs([...songs, songData]);
+    // Reset selected file
+    setSelectedFile(null);
+  };
+
+
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+     <TopToolBar 
+      SelectedFile={selectedFile}
+      onFileChange={(file) => setSelectedFile(file)}
+      onSongUpload={handleSongUpload}
+     />
+     <SongList songs={songs} />
     </div>
+
+
+ 
   );
 }
 

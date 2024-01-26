@@ -1,0 +1,65 @@
+.header{
+    height: 60px;
+    width: 80%;
+    display: flex;
+    justify-content: space-around;
+    background-color: rgb(176, 175, 173);
+    border: 2px solid rgb(134, 133, 132);
+    border-radius: 8px;
+    padding: 5px;
+}
+.start{
+    height: 40px;
+    width: 40%;
+    display: flex;
+    align-items: flex-start;
+}
+.end{
+    height: 40px;
+    width: 40%;
+    display: flex;
+    align-items: flex-end;
+}
+.button{
+    height: 30px;
+    width:100px;
+    background-color:  rgb(205, 205, 205); ;
+    border: 2px solid rgb(134, 133, 132);
+    border-radius: 8px;
+    padding: 5px;
+}
+.input{
+    height: 30px;
+    width: 220px;
+}
+.songListTitel{
+    height: 80px;
+    width: 81%;
+    display: flex;
+    align-items: stretch;
+    margin-block: 15px;
+    background-color:white;
+}
+.songListTitel > div{
+    background-color:rgb(209, 208, 206);
+    color: rgb(63, 62, 60);;
+    margin: 5px;
+    text-align:start;
+    font-size: 30px;
+}
+.songListPley{
+    width:70px;
+    height: 60px
+}
+.songListName{
+    width:35%;
+    height: 60px
+}
+.songListTrack{
+    width:80px;
+    height: 60px
+}
+.songListIcon{
+    width:170px;
+    height: 60px 
+}
